@@ -6,6 +6,15 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
 h2 {
   font-size: 2.4rem;
   color: #4a4a4a;
@@ -13,9 +22,60 @@ h2 {
 
 .nav {
   max-width: 101.5rem;
-  height: 9.4rem;
-  background-color: aqua;
+  background-color: #fff;
   margin: 0 auto 5rem auto;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+.nav-logo-container {
+  padding: 0.5rem 0;
+  height: 9.4rem;
+}
+.nav-logo {
+  display: block;
+  height: 100%;
+}
+.nav-logo-img {
+  height: 100%;
+}
+.nav-items {
+  display: flex;
+  color: #808080;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+.nav-link {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  padding: 0.8rem;
+}
+.nav-link:hover {
+  color: #000;
+}
+.nav-link-dropdown:after {
+  display: inline-block;
+  content: "";
+  border-left: 0.4rem solid transparent;
+  border-right: 0.4rem solid transparent;
+  border-top: 0.4rem solid currentColor;
+  margin-left: 0.8rem;
+  vertical-align: 0.5rem;
+}
+.nav-divider {
+  font-size: 2.4rem;
+  padding: 0.8rem;
+}
+.nav-burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #6abfc3;
+  cursor: pointer;
 }
 
 .main-header {
@@ -69,7 +129,7 @@ h2 {
   margin-bottom: 6rem;
 }
 .subjects-boxes {
-  width: 86rem;
+  max-width: 86rem;
   justify-content: center;
   margin: 0 auto;
 }
@@ -112,6 +172,31 @@ h2 {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
+}
+
+/* Media queries */
+/* 767px */
+@media only screen and (max-width: 47.9375em) {
+  .nav {
+    padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .nav-logo-container {
+    height: 7rem;
+  }
+  .nav-items {
+    display: none;
+  }
+  .nav-burger-menu {
+    display: block;
+  }
+
+  .main-header {
+    margin: 10rem 0 6rem 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
