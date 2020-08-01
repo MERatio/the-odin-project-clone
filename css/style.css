@@ -1,3 +1,18 @@
+.main-cta-btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #fff;
+  padding: 1.6rem 5.6rem;
+  border: none;
+  border-radius: 0.4rem;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0.8px 4px 0px;
+  cursor: pointer;
+}
+.main-cta-btn:hover {
+  opacity: 0.8;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -18,6 +33,10 @@ a {
 h2 {
   font-size: 2.4rem;
   color: #4a4a4a;
+}
+
+.main-cta-btn {
+  background-color: #6abfc3;
 }
 
 .nav {
@@ -79,9 +98,24 @@ h2 {
 }
 
 .main-header {
-  height: 29.4rem;
-  background-color: blue;
   margin-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.main-header h1 {
+  font-size: 3.6rem;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  color: #ce973e;
+  margin-bottom: 3rem;
+}
+.main-header p {
+  font-size: 1.8rem;
+  letter-spacing: 0.2px;
+  color: #848484;
+  margin-bottom: 7rem;
 }
 
 .banner {
@@ -175,6 +209,12 @@ h2 {
 }
 
 /* Media queries */
+/* 1200px */
+@media only screen and (max-width: 75em) {
+  .main-header h1 {
+    max-width: 80%;
+  }
+}
 /* 767px */
 @media only screen and (max-width: 47.9375em) {
   .nav {
