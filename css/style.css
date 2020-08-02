@@ -341,13 +341,19 @@ p {
 .fixed-dropdown-btn {
   width: 6.8rem;
   height: 6.8rem;
+  font-size: 3rem;
+  color: #fff;
   border-radius: 50%;
   background-color: #6abfc3;
   border: none;
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   position: fixed;
   bottom: 2rem;
   right: 2rem;
+}
+.fixed-dropdown-btn:hover {
+  box-shadow: 0 0 15px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Media queries */
@@ -473,6 +479,10 @@ p {
     height: 7rem;
   }
   .footer-links {
+    display: none;
+  }
+
+  .fixed-dropdown-btn {
     display: none;
   }
 }
