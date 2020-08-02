@@ -250,8 +250,8 @@ h2 {
 
 /* Media queries */
 
-/* 1200px */
-@media only screen and (max-width: 75em) {
+/* 1199px */
+@media only screen and (max-width: 74.9375em) {
   .main-header {
     h1 {
       max-width: 80%;
@@ -300,8 +300,8 @@ h2 {
   }
 }
 
-/* 576px */
-@media only screen and (max-width: 36em) {
+/* 575px */
+@media only screen and (max-width: 35.9375em) {
   .how-it-works {
     &-box-description {
       padding: 0 3.2rem;
