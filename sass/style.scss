@@ -63,6 +63,16 @@ p {
   margin: 0 auto;
 }
 
+.link {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $grey;
+
+  &:hover {
+    color: #000;
+  }
+}
+
 .nav {
   max-width: 101.5rem;
   background-color: #fff;
@@ -333,19 +343,72 @@ p {
 
 .footer {
   height: 27.7rem;
-  background-color: crimson;
+  display: flex;
 
-  .fixed-dropdown-btn {
-    width: 6.8rem;
-    height: 6.8rem;
-    border-radius: 50%;
-    background-color: #6abfc3;
-    border: none;
-    cursor: pointer;
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+  & > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  &-logo-container {
+    flex: 2;
+  }
+
+  &-logo {
+    height: 7rem;
+  }
+
+  &-social {
+    flex: 1;
+
+    &-items {
+      width: 100%;
+      color: $orange;
+      display: flex;
+      text-align: center;
+    }
+
+    &-item {
+      flex: 1;
+    }
+
+    &-link {
+      font-size: 2.4rem;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  &-links {
+    flex: 2;
+
+    &-items {
+      width: 13rem;
+      height: 9rem;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &-link {
+    display: inline-block;
+    height: 3rem;
+  }
+}
+
+.fixed-dropdown-btn {
+  width: 6.8rem;
+  height: 6.8rem;
+  border-radius: 50%;
+  background-color: #6abfc3;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
 }
 
 /* Media queries */
@@ -434,6 +497,22 @@ p {
       padding: 0 6.5rem;
     }
   }
+
+  .footer {
+    height: 14rem;
+
+    &-logo-container {
+      display: none;
+    }
+
+    &-social {
+      flex: 1;
+    }
+
+    &-links {
+      flex: 1;
+    }
+  }
 }
 
 /* 575px */
@@ -489,6 +568,14 @@ p {
       &-name {
         margin-bottom: 4rem;
       }
+    }
+  }
+
+  .footer {
+    height: 7rem;
+
+    &-links {
+      display: none;
     }
   }
 }
