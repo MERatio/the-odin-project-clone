@@ -97,7 +97,7 @@ p {
 
   &-items {
     display: flex;
-    color: #808080;
+    color: $grey;
   }
 
   &-item {
@@ -178,7 +178,7 @@ p {
 
     p {
       font-size: 1.8rem;
-      color: #808080;
+      color: $grey;
     }
   }
 
