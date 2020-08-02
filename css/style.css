@@ -119,7 +119,6 @@ h2 {
 }
 
 .how-it-works {
-  background-color: brown;
   margin: 10rem 0 7rem 0;
 }
 .how-it-works-header {
@@ -137,14 +136,27 @@ h2 {
 }
 .how-it-works-boxes {
   max-width: 108rem;
-  background-color: burlywood;
   margin: 0 auto;
 }
-.how-it-works-boxes .how-it-works-box {
-  height: 42.4rem;
+.how-it-works-box {
   padding: 1.6rem;
-  background-clip: content-box;
-  background-color: cadetblue;
+  text-align: center;
+  overflow: hidden;
+}
+.how-it-works-box-img {
+  height: 16.5rem;
+}
+.how-it-works-box-text {
+  font-size: 1.8rem;
+  margin-top: 5rem;
+}
+.how-it-works-box-title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+.how-it-works-box-description {
+  line-height: 1.88;
+  color: #808080;
 }
 
 .subjects {
@@ -230,6 +242,25 @@ h2 {
 
   .main-header {
     margin: 10rem 0 6rem 0;
+  }
+
+  .how-it-works-header {
+    max-width: 51rem;
+  }
+  .how-it-works-box-img {
+    height: 12rem;
+  }
+  .how-it-works-box-description {
+    padding: 0 6.5rem;
+  }
+}
+/* 576px */
+@media only screen and (max-width: 36em) {
+  .how-it-works-box-description {
+    padding: 0 3.2rem;
+  }
+  .how-it-works-box-img {
+    height: 8rem;
   }
 }
 
