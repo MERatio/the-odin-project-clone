@@ -1,4 +1,4 @@
-.main-cta-btn {
+.secondary-cta-btn, .main-cta-btn {
   font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 0.2px;
@@ -9,7 +9,7 @@
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0.8px 4px 0px;
   cursor: pointer;
 }
-.main-cta-btn:hover {
+.secondary-cta-btn:hover, .main-cta-btn:hover {
   opacity: 0.8;
 }
 
@@ -32,11 +32,24 @@ a {
 
 h2 {
   font-size: 2.4rem;
+  letter-spacing: 0.3px;
   color: #4a4a4a;
 }
 
 .main-cta-btn {
   background-color: #6abfc3;
+}
+
+.secondary-cta-btn {
+  background-color: #ce973e;
+}
+
+.d-block {
+  display: block;
+}
+
+.mx-auto {
+  margin: 0 auto;
 }
 
 .nav {
@@ -160,24 +173,38 @@ h2 {
 }
 
 .subjects {
-  height: 116.3rem;
   padding: 6rem 0;
-  background-color: chartreuse;
+  background-color: #f3f3f3;
 }
 .subjects-header {
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
 }
 .subjects-boxes {
   max-width: 86rem;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0 auto 5rem;
 }
 .subjects-boxes .subject-box {
   height: 28.6rem;
   padding: 1.5rem;
   background-clip: content-box;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.subjects-boxes .subject-box-img {
+  width: 16rem;
+  height: 16rem;
+}
+.subjects-boxes .subject-box-title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  color: #4a4a4a;
+  margin-top: 1.8rem;
 }
 
 .success-stories {
@@ -215,10 +242,16 @@ h2 {
 }
 
 /* Media queries */
-/* 1200px */
-@media only screen and (max-width: 75em) {
+/* 1199px */
+@media only screen and (max-width: 74.9375em) {
   .main-header h1 {
     max-width: 80%;
+  }
+}
+/* 991px */
+@media only screen and (max-width: 61.9375em) {
+  .subjects-boxes {
+    max-width: 58rem;
   }
 }
 /* 767px */
@@ -254,13 +287,28 @@ h2 {
     padding: 0 6.5rem;
   }
 }
-/* 576px */
-@media only screen and (max-width: 36em) {
+/* 575px */
+@media only screen and (max-width: 35.9375em) {
   .how-it-works-box-description {
     padding: 0 3.2rem;
   }
   .how-it-works-box-img {
     height: 8rem;
+  }
+
+  .subjects-boxes {
+    max-width: 30rem;
+  }
+  .subjects-boxes .subject-box {
+    height: 18rem;
+    padding: 1rem;
+  }
+  .subjects-boxes .subject-box-img {
+    width: 8rem;
+    height: 8rem;
+  }
+  .subjects-boxes .subject-box-title {
+    margin-top: 1rem;
   }
 }
 
