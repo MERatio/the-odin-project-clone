@@ -41,6 +41,10 @@ h2 {
   color: #4a4a4a;
 }
 
+p {
+  line-height: 1.88;
+}
+
 .main-cta-btn {
   @extend %cta-btn;
   background-color: $blue;
@@ -164,7 +168,6 @@ h2 {
 
     p {
       font-size: 1.8rem;
-      line-height: 1.88;
       color: #808080;
     }
   }
@@ -241,22 +244,89 @@ h2 {
 }
 
 .success-stories {
-  height: 96.6rem;
   padding-top: 7rem;
-  background-color: chocolate;
+  background: linear-gradient(to bottom, #fff, #eee);
 
   &-header {
     text-align: center;
     margin-bottom: 6rem;
   }
 
-  &-boxes {
-    margin: 10rem 3.5rem 0;
+  .container {
+    padding: 0;
+  }
 
-    .success-story-box {
-      height: 16.4rem;
-      background-color: indigo;
-      margin-bottom: 3.6rem;
+  &-boxes {
+    width: 95%;
+    margin: 10rem auto 3rem;
+    padding: 0;
+  }
+
+  .success-story {
+    padding: 0;
+    margin-bottom: 3.6rem;
+    display: flex;
+
+    &-img-container {
+      flex-basis: 10rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    &-img {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      margin-top: 1.6rem;
+    }
+
+    &-text {
+      font-size: 1.8rem;
+      letter-spacing: 0.2px;
+      flex: 1;
+    }
+
+    &-name {
+      color: $orange;
+      margin-bottom: 0.5rem;
+
+      a:hover {
+        color: #000;
+      }
+    }
+
+    &-comment {
+      color: $grey;
+    }
+  }
+
+  &-read-more {
+    text-align: center;
+
+    &-link {
+      font-size: 1.6rem;
+      color: $grey;
+      text-decoration: underline;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  .sign-up-cta {
+    padding: 8rem 4rem;
+    text-align: center;
+
+    &-title {
+      font-size: 3.5rem;
+      font-weight: 100;
+      letter-spacing: 0.2px;
+      color: $grey;
+    }
+
+    &-btn {
+      margin-top: 5rem;
     }
   }
 }
@@ -285,6 +355,33 @@ h2 {
   .main-header {
     h1 {
       max-width: 80%;
+    }
+  }
+
+  .success-stories {
+    &-boxes {
+      max-width: 60rem;
+    }
+
+    .success-story {
+      &-img-container {
+        flex-basis: 10rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      &-img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        margin-top: 1.6rem;
+      }
+
+      &-text {
+        font-size: 1.8rem;
+        letter-spacing: 0.2px;
+        flex: 1;
+      }
     }
   }
 }
@@ -367,6 +464,30 @@ h2 {
         &-title {
           margin-top: 1rem;
         }
+      }
+    }
+  }
+}
+
+/* 480px */
+@media only screen and (max-width: 30em) {
+  .success-stories {
+    &-boxes {
+      margin-top: 5rem;
+      margin: 10rem 2.6rem 3rem;
+    }
+
+    .success-story {
+      &:nth-last-of-type(-n + 2) {
+        display: none;
+      }
+
+      &-img-container {
+        display: none;
+      }
+
+      &-name {
+        margin-bottom: 4rem;
       }
     }
   }
